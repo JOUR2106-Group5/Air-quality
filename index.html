@@ -54,10 +54,12 @@
         </div>
         <div class="mainpart">
             <div class="leader"></div>
-            <hr>
+            <hr style="color: gray">
             <div style="float:left;width:57%;height:400px" id="contract">
             </div>
             <div style="float:right;width:40%;height:400px"></div>
+            <div class="leader"></div>
+            <div style="float:left;width:100%;height:400px" id="impact"></div>
         </div>
         <div class="container2">
             <div class="back-to-top ">
@@ -604,4 +606,119 @@
     }
 
     myChart2.setOption(option);
+</script>
+
+<script type="text/javascript">
+    var myChart3 = echarts.init(document.getElementById('impact'));
+    var colors = ['#659F83', '#F68989', '#e8ca04'];
+
+    option = {
+        backgroundColor: '#02182b',
+        color: colors,
+
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross'
+            }
+        },
+        grid: {
+            right: '20%'
+        },
+        toolbox: {
+            feature: {
+                dataView: {
+                    show: true,
+                    readOnly: false
+                },
+                restore: {
+                    show: true
+                },
+                saveAsImage: {
+                    show: true
+                }
+            }
+        },
+        legend: {
+            data: ['Early Death', 'Economic Loss', 'PM2,5']
+        },
+        xAxis: [{
+            type: 'category',
+            axisTick: {
+                alignWithLabel: true
+            },
+            data: ['1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016']
+        }],
+        yAxis: [{
+            type: 'value',
+            name: 'Early Death',
+            min: 0,
+            max: 5000,
+            position: 'right',
+            axisLine: {
+                lineStyle: {
+                    color: colors[0]
+                }
+            },
+            axisLabel: {
+                formatter: '{value}'
+            }
+        }, {
+            type: 'value',
+            name: 'Economic Loss',
+            min: 0,
+            max: 50000,
+            position: 'right',
+            offset: 80,
+            axisLine: {
+                lineStyle: {
+                    color: colors[1]
+                }
+            },
+            axisLabel: {
+                formatter: '{value} M'
+            }
+        }, {
+            type: 'value',
+            name: 'PM2.5',
+            min: 10,
+            max: 60,
+            position: 'left',
+            axisLine: {
+                lineStyle: {
+                    color: colors[2]
+                }
+            },
+            axisLabel: {
+                formatter: '{value} µg/m3'
+            }
+        }],
+        dataZoom: [{
+            show: true,
+            realtime: true,
+            start: 60,
+            end: 100
+        }, {
+            type: 'inside',
+            realtime: true,
+            start: 60,
+            end: 80
+        }],
+        series: [{
+            name: 'Early Death',
+            type: 'bar',
+            data: [3007, 3417, 3217, 3306, 2916, 3181, 3871, 3221, 3328, 3298, 3232, 3331, 3376, 3048, 3279, 2616, 2196, 1686]
+        }, {
+            name: 'Economic Loss',
+            type: 'bar',
+            yAxisIndex: 1,
+            data: [38363.4, 43462.4, 39706.0, 41920.7, 36840.2, 40250.0, 48916.3, 40826.7, 41334.7, 42048.2, 41492.5, 40329.6, 41627.6, 42458.2, 38142.9, 41131.4, 32657.4, 27407.0, 20954.8]
+        }, {
+            name: 'PM2.5',
+            type: 'line',
+            yAxisIndex: 2,
+            data: [, 31.62, 25.94, 30.15, 26.76, 34.67, 40.58, 37.59, 34.50, 37.55, 35.31, 27.92, 25.85, 31.26, 24.69, 29.33, 27.28, 23.62, 18.97]
+        }]
+    }
+    myChart3.setOption(option);
 </script>
