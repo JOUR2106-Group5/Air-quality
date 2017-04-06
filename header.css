@@ -173,13 +173,13 @@ main {
 }
 
 #header-background-back {
-    background-image: url(picture/back.png);
+    background-image: url(picture/saving-energy.jpg);
     background-position: left center;
-    opacity: 22%;
+    opacity: 0;
     visibility: hidden;
 }
 
 #header-background-front {
-    background-image: url(picture/back.png);
+    background-image: url(picture/saving-energy.jpg);
     background-position: left center;
 }
