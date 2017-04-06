@@ -1,0 +1,37 @@
+.headline {
+    font-size: 2.125rem;
+    line-height: 2.375rem;
+    font-weight: 700;
+    font-family: "nyt-cheltenham", georgia, "times new roman", times, serif;
+    font-style: italic;
+    color: white;
+    display: block;
+}
+
+;
+.kicker {
+    margin-bottom: 32px;
+    margin-top: 32px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 300;
+    font-style: normal;
+    font-family: "nyt-cheltenham", georgia, "times new roman", times, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+    color: #e2e2e2;
+}
+
+;
+.author {
+    align-items: center;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 14px;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 16px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    font-family: "nyt-cheltenham", georgia, "times new roman", times, serif;
+    color: #e2e2e2;
+}
