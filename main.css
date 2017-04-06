@@ -1,8 +1,8 @@
 .headline {
-    margin-left: 10%;
+    
     margin-top: 10%;
     font-size: 3.125rem;
-    line-height: 2.375rem;
+    line-height: 3.375rem;
     font-weight: 700;
     font-family: "nyt-cheltenham", georgia, "times new roman", times, serif;
     font-style: italic;
@@ -14,14 +14,14 @@
 .kicker {
     margin-bottom: 32px;
     margin-top: 32px;
-    font-size: 20px;
+    font-size: 12px;
     line-height: 1rem;
     font-weight: 300;
     font-style: normal;
     font-family: "nyt-cheltenham", georgia, "times new roman", times, serif;
     text-transform: uppercase;
     letter-spacing: 0.075em;
-    color: #e2e2e2;
+    color: white
 }
 
 ;
@@ -29,12 +29,12 @@
     align-items: center;
     border-top: 1px solid #e2e2e2;
     padding-top: 14px;
-    font-size: 15px;
+    font-size: 12px;
     border-bottom: 1px solid #e2e2e2;
     padding-bottom: 16px;
     flex-direction: row;
     display: flex;
     justify-content: space-between;
     font-family: "nyt-cheltenham", georgia, "times new roman", times, serif;
-    color: #e2e2e2;
+    color: powderblue
 }
