@@ -1,5 +1,7 @@
 .headline {
-    font-size: 2.125rem;
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 3.125rem;
     line-height: 2.375rem;
     font-weight: 700;
     font-family: "nyt-cheltenham", georgia, "times new roman", times, serif;
@@ -12,7 +14,7 @@
 .kicker {
     margin-bottom: 32px;
     margin-top: 32px;
-    font-size: 0.75rem;
+    font-size: 20px;
     line-height: 1rem;
     font-weight: 300;
     font-style: normal;
@@ -27,6 +29,7 @@
     align-items: center;
     border-top: 1px solid #e2e2e2;
     padding-top: 14px;
+    font-size: 15px;
     border-bottom: 1px solid #e2e2e2;
     padding-bottom: 16px;
     flex-direction: row;
