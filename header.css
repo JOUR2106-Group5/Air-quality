@@ -175,7 +175,7 @@ main {
 #header-background-back {
     background-image: url(picture/back.png);
     background-position: left center;
-    opacity: 20;
+    opacity: 0;
     visibility: hidden;
 }
 
