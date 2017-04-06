@@ -54,12 +54,17 @@
         </div>
         <div class="mainpart">
             <div class="leader"></div>
-            <hr style="color: gray">
-            <div style="float:left;width:57%;height:400px" id="contract">
+            <div style="height:420px; padding:5px">
+                <div style="float:left;width:57%;height:400px" id="contract">
+                </div>
+                <div style="float:right;width:30%;height:400px"></div>
+
             </div>
-            <div style="float:right;width:40%;height:400px"></div>
-            <div class="leader"></div>
-            <div style="float:left;width:100%;height:400px" id="impact"></div>
+            <div style=" display: block;margin-top: 20px;height: 350px; margin-bottom: 50px;"></div>
+
+        </div>
+        <div style="margin-top:20px">
+            <div style="width:100%;height:400px;display:block;" id="impact"></div>
         </div>
         <div class="container2">
             <div class="back-to-top ">
@@ -610,7 +615,7 @@
 
 <script type="text/javascript">
     var myChart3 = echarts.init(document.getElementById('impact'));
-    var colors = ['#659F83', '#F68989', '#e8ca04'];
+    var colors = ['#659F83', '#e8ca04', '#F68989'];
 
     option = {
         backgroundColor: '#02182b',
@@ -640,7 +645,7 @@
             }
         },
         legend: {
-            data: ['Early Death', 'Economic Loss', 'PM2,5']
+            data: ['Early Death', 'Economic Loss', 'PM2.5']
         },
         xAxis: [{
             type: 'category',
@@ -652,13 +657,16 @@
         yAxis: [{
             type: 'value',
             name: 'Early Death',
-            min: 0,
-            max: 5000,
+            min: 1000,
+            max: 6000,
             position: 'right',
             axisLine: {
                 lineStyle: {
                     color: colors[0]
                 }
+            },
+            splitLine: {
+                show: false
             },
             axisLabel: {
                 formatter: '{value}'
@@ -666,14 +674,17 @@
         }, {
             type: 'value',
             name: 'Economic Loss',
-            min: 0,
-            max: 50000,
+            min: 10000,
+            max: 60000,
             position: 'right',
             offset: 80,
             axisLine: {
                 lineStyle: {
                     color: colors[1]
                 }
+            },
+            splitLine: {
+                show: false
             },
             axisLabel: {
                 formatter: '{value} M'
@@ -682,12 +693,15 @@
             type: 'value',
             name: 'PM2.5',
             min: 10,
-            max: 60,
+            max: 40,
             position: 'left',
             axisLine: {
                 lineStyle: {
                     color: colors[2]
                 }
+            },
+            splitLine: {
+                show: false
             },
             axisLabel: {
                 formatter: '{value} µg/m3'
@@ -706,11 +720,11 @@
         }],
         series: [{
             name: 'Early Death',
-            type: 'bar',
-            data: [3007, 3417, 3217, 3306, 2916, 3181, 3871, 3221, 3328, 3298, 3232, 3331, 3376, 3048, 3279, 2616, 2196, 1686]
+            type: 'line',
+            data: [3007, 3417, 3217, 3306, 2916, 3181, 3871, 3221, 3263, 3328, 3298, 3232, 3331, 3376, 3048, 3279, 2616, 2196, 1686]
         }, {
             name: 'Economic Loss',
-            type: 'bar',
+            type: 'line',
             yAxisIndex: 1,
             data: [38363.4, 43462.4, 39706.0, 41920.7, 36840.2, 40250.0, 48916.3, 40826.7, 41334.7, 42048.2, 41492.5, 40329.6, 41627.6, 42458.2, 38142.9, 41131.4, 32657.4, 27407.0, 20954.8]
         }, {
