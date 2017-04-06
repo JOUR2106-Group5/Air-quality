@@ -44,9 +44,12 @@
             <div style="float:right;width:57%;height:620px" id="relation">
             </div>
         </div>
-
-
-        <div id="content">
+        <div class="mainpart">
+            <div class="leader"></div>
+            <hr>
+            <div style="float:left;width:57%;height:400px" id="contract">
+            </div>
+            <div style="float:right;width:40%;height:400px"></div>
         </div>
         <div class="container2">
             <div class="back-to-top ">
@@ -298,4 +301,299 @@
         }]
     };
     myChart1.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart2 = echarts.init(document.getElementById('contract'));
+    var myData = ['PM2.5(Annual)', 'PM2.5(24h)', 'PM10(Annual)', 'PM10(24h)', 'NO2(Annual)'];
+
+    var timeLineData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+    option = {
+        baseOption: {
+            backgroundColor: '#02182b',
+            timeline: {
+                show: false,
+                axisType: 'category',
+                tooltip: {
+                    show: true,
+                    formatter: function(params) {
+                        console.log(params);
+                        return params.name + 'm';
+                    }
+                },
+                autoPlay: false,
+                currentIndex: 6,
+                playInterval: 1000,
+                label: {
+                    normal: {
+                        show: true,
+                        interval: 'auto',
+                        formatter: '{value}m',
+                    },
+                },
+                data: [],
+            },
+            title: {
+                text: 'Differeences between the air guidelines of WHO and HK',
+                textStyle: {
+                    color: '#fff',
+                    fontSize: 16,
+                },
+                subtext: 'Units:µg/m3',
+            },
+            legend: {
+                data: ['WHO', 'HK'],
+                top: 20,
+                right: '10%',
+                textStyle: {
+                    color: '#fff',
+                },
+            },
+            tooltip: {
+                show: true,
+                trigger: 'axis',
+                formatter: '{b}<br/>{a}: {c}µg/m3',
+                axisPointer: {
+                    type: 'shadow',
+                }
+            },
+            toolbox: {
+                feature: {
+                    dataView: {
+                        show: true,
+                        readOnly: false
+                    },
+                    restore: {
+                        show: true
+                    },
+                    saveAsImage: {
+                        show: true
+                    }
+                }
+            },
+            grid: [{
+                show: false,
+                left: '4%',
+                top: 60,
+                bottom: 60,
+                containLabel: true,
+                width: '46%',
+            }, {
+                show: false,
+                left: '50.5%',
+                top: 80,
+                bottom: 60,
+                width: '4%',
+            }, {
+                show: false,
+                right: '4%',
+                top: 60,
+                bottom: 60,
+                containLabel: true,
+                width: '46%',
+            }, ],
+
+            xAxis: [{
+                max: 100,
+                type: 'value',
+                inverse: true,
+                axisLine: {
+                    show: false,
+                },
+                axisTick: {
+                    show: false,
+                },
+                position: 'top',
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#B2B2B2',
+                        fontSize: 12,
+                    },
+                },
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#1F2022',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+            }, {
+                gridIndex: 1,
+                show: false,
+            }, {
+                gridIndex: 2,
+                type: 'value',
+                axisLine: {
+                    show: false,
+                },
+                axisTick: {
+                    show: false,
+                },
+                position: 'top',
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#B2B2B2',
+                        fontSize: 12,
+                    },
+                },
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#1F2022',
+                        width: 1,
+                        type: 'solid',
+                    },
+                },
+            }, ],
+            yAxis: [{
+                type: 'category',
+                inverse: true,
+                position: 'right',
+                axisLine: {
+                    show: false
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    show: false,
+                    margin: 8,
+                    textStyle: {
+                        color: '#9D9EA0',
+                        fontSize: 12,
+                    },
+
+                },
+                data: myData,
+            }, {
+                gridIndex: 1,
+                type: 'category',
+                inverse: true,
+                position: 'left',
+                axisLine: {
+                    show: false
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#9D9EA0',
+                        fontSize: 12,
+                    },
+
+                },
+                data: myData.map(function(value) {
+                    return {
+                        value: value,
+                        textStyle: {
+                            align: 'center',
+                        }
+                    }
+                }),
+            }, {
+                gridIndex: 2,
+                type: 'category',
+                inverse: true,
+                position: 'left',
+                axisLine: {
+                    show: false
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    show: false,
+                    textStyle: {
+                        color: '#9D9EA0',
+                        fontSize: 12,
+                    },
+
+                },
+                data: myData,
+            }, ],
+            series: [],
+
+        },
+
+        options: [],
+
+
+    };
+
+    for (var i = 1; i < timeLineData.length; i++) {
+        option.baseOption.timeline.data.push(timeLineData[i]);
+        option.options.push({
+
+            series: [{
+                    name: 'WHO',
+                    type: 'bar',
+                    barGap: 20,
+                    barWidth: 20,
+                    label: {
+                        normal: {
+                            show: false,
+                        },
+                        emphasis: {
+                            show: true,
+                            position: 'left',
+                            offset: [0, 0],
+                            textStyle: {
+                                color: '#fff',
+                                fontSize: 14,
+                            },
+                        },
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#659F83',
+                        },
+                        emphasis: {
+                            color: '#08C7AE',
+                        },
+                    },
+                    data: [10, 25, 20, 50, 40]
+                },
+
+
+                {
+                    name: 'HK',
+                    type: 'bar',
+                    barGap: 20,
+                    barWidth: 20,
+                    xAxisIndex: 2,
+                    yAxisIndex: 2,
+                    label: {
+                        normal: {
+                            show: false,
+                        },
+                        emphasis: {
+                            show: true,
+                            position: 'right',
+                            offset: [0, 0],
+                            textStyle: {
+                                color: '#fff',
+                                fontSize: 14,
+                            },
+                        },
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#F68989',
+                        },
+                        emphasis: {
+                            color: '#F94646',
+                        },
+                    },
+                    data: [35, 75, 50, 100, 40]
+                }
+            ]
+        });
+    }
+
+    myChart2.setOption(option);
 </script>
