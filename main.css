@@ -2,7 +2,7 @@
     padding-left: 40px;
     margin-top: 15%;
     font-size: 3.125rem;
-    line-height: 3.975rem;
+    line-height: 4.3rem;
     font-weight: 700;
     font-family: "nyt-cheltenham", georgia, "times new roman", times, serif;
     font-style: italic;
@@ -13,10 +13,11 @@
 ;
 .kicker {
     padding-left: 40px;
+    display: block;
     color: white;
     margin-bottom: 32px;
     margin-top: 32px;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1rem;
     font-weight: 300;
     font-style: normal;
@@ -42,7 +43,7 @@
 }
 
 .mainpart {
-    width: 70%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -50,6 +51,6 @@
 
 .leader {
     margin-top: 20px;
-    height: 400px;
+    height: 350px;
     margin-bottom: 50px;
 }

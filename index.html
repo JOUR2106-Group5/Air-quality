@@ -36,8 +36,16 @@
         <div style="height:650px; width:100%;background-color:#02182b ">
             <div style="float: left;margin-top:50px;margin-left: 50px; width: 35%;height:620px">
                 <div class="headline">HongKong's roadside air quality level was stiil twice that of WHO's upper limitation</div>
-                <div class="kicker">ENVIRONMENT & HEALTH</div>
-                <div class="author">By JINGXI HUANG, YUJIE LI, LIU YUE</div>
+                <p style="padding-left: 40px; display: block; color:#B2B2B2; margin-bottom: 32px; margin-top: 32px; font-size: 15px;line-height: 1rem;font-weight: 300;font-family: 'nyt-cheltenham', georgia, 'times new roman', times, serif; letter-spacing: 0.075em;">ENVIRONMENT & HEALTH</p>
+                <div style="padding-left: 40px; display: block; color: #B2B2B2; margin-bottom: 25px; margin-top: 32px; font-size: 15px;line-height: 1rem;font-weight: 300;font-family: 'nyt-cheltenham', georgia, 'times new roman', times, serif; letter-spacing: 0.075em;">
+                    <p>By GROUP 5 </P>
+                    <br>
+                    <P>JINGXI HUANG</P>
+                    <br>
+                    <p> YUJIE LI</p>
+                    <br>
+                    <p> YUE LIU </p>
+                </div>
 
             </div>
 
@@ -318,7 +326,7 @@
                     show: true,
                     formatter: function(params) {
                         console.log(params);
-                        return params.name + 'm';
+                        return params.name + '月份数据统计';
                     }
                 },
                 autoPlay: false,
@@ -328,7 +336,7 @@
                     normal: {
                         show: true,
                         interval: 'auto',
-                        formatter: '{value}m',
+                        formatter: '{value}月',
                     },
                 },
                 data: [],
@@ -343,8 +351,8 @@
             },
             legend: {
                 data: ['WHO', 'HK'],
-                top: 20,
-                right: '10%',
+                top: 4,
+                right: '12%',
                 textStyle: {
                     color: '#fff',
                 },
