@@ -64,6 +64,7 @@
 
         </div>
         <div style="margin-top: 10px">
+<<<<<<< HEAD
             <h1 style="text-align: center;font-weight:100;margin: 18px;font-size:30px"> Roadside air quality has changed just a little for past 20 years</h1>
             <div class="bmi-content" style="width:78%;display:block;margin-left:auto;margin-right:auto">
                 <ul class="nav nav-tabs nav-justified" role="tablist">
@@ -106,6 +107,50 @@
 
 
 
+=======
+                <h1 style="text-align: center;font-weight:100;margin: 18px"> Main Pollutant Changes in 20 years</h1>
+                <div class="bmi-content">
+                    <ul class="nav nav-tabs nav-justified" role="tablist">
+                        <li role="presentation" class="active" style="font-size: 18px">
+                            <a href="#Electricity" aria-controls="Electricity" role="tab" data-toggle="tab">
+                                PM2.5
+                            </a>
+                        </li>
+                        <li role="presentation" style="font-size: 18px">
+                            <a href="#Town" aria-controls="Town" role="tab" data-toggle="tab">
+                                NO2
+                            </a>
+                        </li>
+                        <li role="presentation" style="font-size: 18px">
+                            <a href="#Oil" aria-controls="Oil" role="tab" data-toggle="tab">
+                            PM10
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="Electricity">
+                            <div class="row">
+                                <div id="charta1" style="width: 1200px;height:500px;"></div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="Town">
+                            <div class="row">
+                                 <div id="charta2"style="width: 1200px;height:500px;"></div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="Oil">
+                            <div class="row">
+                               <div id="charta3"style="width: 1200px;height:500px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+       
+        
+>>>>>>> origin/gh-pages
         <div style="margin-top:20px">
             <div style="width:100%;height:600px;display:block;" id="impact"></div>
         </div>
@@ -128,6 +173,7 @@
 
 </body>
 <script type="text/javascript">
+<<<<<<< HEAD
     $(function() {
         var myChart4 = echarts.init(document.getElementById('charta1'));
         var colors = ['#e8ca04', '#8dd972', '#7eb3ee']
@@ -630,6 +676,346 @@
         myChart6.setOption(option);
     });
 </script>
+=======
+            $(function() {
+            var myChart4 = echarts.init(document.getElementById('charta1'));
+            option = {
+                backgroundColor: '#02182b',
+                colors :['#CBD58C', '#FC9F97', '#C3D6EB'],
+    title: {
+        text: 'pm2.5 changes in 20 years'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['Causeway Bay','Central','Mong Kok'],
+        right:'30',
+        top:'15'
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            name:'Causeway Bay',
+            type:'line',
+            data:[ , , , , , , , , , , , , , , , , 42,45,38,37],
+            areaStyle:{
+                normal:{
+                    color: new echarts.graphic.LinearGradient(0,0,0,1,[{
+                        offset:0,
+                        color:'rgba(203,213,140,0.8)'
+                    },{
+                        offset:0.75,
+                        color:'color:rgba(203,213,140,0)'
+                    }],false),
+                    shadowColor:'rgba(0,0,0,0.1)',
+                    shadowBlur:10
+                }
+
+            },
+            markline:{
+                data:[
+                    {
+                        name:'WHO',
+                        yAxis:10}],
+                        label:{normal:{
+                            show:true,
+                            formatter:'{b}:{c}'
+                        }}
+                    }
+        },
+        {
+            name:'Central',
+            type:'line',
+            data:[, , , ,43,47,45,53,54,48,47,45,41,35,36,39,33,34,28],
+             areaStyle:{
+                normal:{
+                    color: new echarts.graphic.LinearGradient(0,0,0,1,[{
+                        offset:0,
+                        color:'rgba(252,159,151,0.8)'
+                    },{
+                        offset:0.75,
+                        color:'color:rgba(252,159,151,0)'
+                    }],false),
+                    shadowColor:'rgba(0,0,0,0.1)',
+                    shadowBlur:10
+                }
+
+            },
+            
+        },
+        {
+            name:'Mong Kok',
+            type:'line',
+            data:[, , , , , , , , , , , , , , ,37,32,33,31,30],
+             areaStyle:{
+                normal:{
+                    color: new echarts.graphic.LinearGradient(0,0,0,1,[{
+                        offset:0,
+                        color:'rgba(195,214,235,0.8)'
+                    },{
+                        offset:0.75,
+                        color:'color:rgba(195,214,235,0)'
+                    }],false),
+                    shadowColor:'rgba(0,0,0,0.1)',
+                    shadowBlur:10
+                }
+
+            },
+        },
+        
+    ]
+};
+myChart4.setOption(option);
+ });
+            </script>
+            <!--chart 3 NO2-->
+            <script type="text/javascript">
+                        $(function() {
+            var myChart5 = echarts.init(document.getElementById('charta2'));
+option = {
+     backgroundColor: '#02182b',
+                colors :['#CBD58C', '#FC9F97', '#C3D6EB'],
+    title: {
+        text: 'NO2 changes in 20 years'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['Causeway Bay','Central','Mong Kok'],
+        right:'30',
+        top:'15'
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            name:'Causeway Bay',
+            type:'line',
+            data:[, ,104,105,98,105,94,91,93,95,95,90,96,109,116,124,117,121,103,106],
+             areaStyle:{
+                normal:{
+                    color: new echarts.graphic.LinearGradient(0,0,0,1,[{
+                        offset:0,
+                        color:'rgba(203,213,140,0.8)'
+                    },{
+                        offset:0.75,
+                        color:'color:rgba(203,213,140,0)'
+                    }],false),
+                    shadowColor:'rgba(0,0,0,0.1)',
+                    shadowBlur:10
+                }
+
+            },
+            markline:{
+                data:[
+                    {
+                        name:'WHO',
+                        yAxis:40}],
+                        label:{normal:{
+                            show:true,
+                            formatter:'{b}:{c}'
+                        }}
+                    }
+        },
+        {
+            name:'Central',
+            type:'line',
+            data:[,,,92,94,94,90,96,105,99,96,100,102,112,122,123,117,122,104,93],
+            areaStyle:{
+                normal:{
+                    color: new echarts.graphic.LinearGradient(0,0,0,1,[{
+                        offset:0,
+                        color:'rgba(252,159,151,0.8)'
+                    },{
+                        offset:0.75,
+                        color:'color:rgba(252,159,151,0)'
+                    }],false),
+                    shadowColor:'rgba(0,0,0,0.1)',
+                    shadowBlur:10
+                }
+
+            },
+        },
+        {
+            name:'Mong Kok',
+            type:'line',
+            data:[75,85,83,86,84,99,91,98,105,93,97,101,96,108,113,120,120,116,100,97],
+            areaStyle:{
+                normal:{
+                    color: new echarts.graphic.LinearGradient(0,0,0,1,[{
+                        offset:0,
+                        color:'rgba(252,159,151,0.8)'
+                    },{
+                        offset:0.75,
+                        color:'color:rgba(252,159,151,0)'
+                    }],false),
+                    shadowColor:'rgba(0,0,0,0.1)',
+                    shadowBlur:10
+                }
+
+            },
+            
+        },
+        
+        
+    ]
+};
+            myChart5.setOption(option);
+ });
+            </script>
+            <!--chart 4 PM10-->
+            <script type="text/javascript">
+                        $(function() {
+            var myChart6 = echarts.init(document.getElementById('charta3'));
+option = {
+     backgroundColor: '#02182b',
+                colors :['#CBD58C', '#FC9F97', '#C3D6EB'],
+    title: {
+        text: 'PM10 changes in 20 years'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['Causeway Bay','Central','Mong Kok','WHO'],
+        right:'30',
+        top:'15'
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            name:'Causeway Bay',
+            type:'line',
+            data:[, ,109,105,101,97,80,81,88,84,83,85,79,71,66,66,61,64,57,55],
+             areaStyle:{
+                normal:{
+                    color: new echarts.graphic.LinearGradient(0,0,0,1,[{
+                        offset:0,
+                        color:'rgba(203,213,140,0.8)'
+                    },{
+                        offset:0.75,
+                        color:'color:rgba(203,213,140,0)'
+                    }],false),
+                    shadowColor:'rgba(0,0,0,0.1)',
+                    shadowBlur:10
+                }
+
+            },
+            markline:{
+                data:[
+                    {
+                        name:'WHO',
+                        yAxis:20}],
+                        label:{normal:{
+                            show:true,
+                            formatter:'{b}:{c}'
+                        }}
+                    }
+                
+            },
+        
+        {
+            name:'Central',
+            type:'line',
+            data:[,,,76,66,70,68,77,77,72,75,68,63,58,59,62,51,56,46,37],
+            areaStyle:{
+                normal:{
+                    color: new echarts.graphic.LinearGradient(0,0,0,1,[{
+                        offset:0,
+                        color:'rgba(252,159,151,0.8)'
+                    },{
+                        offset:0.75,
+                        color:'color:rgba(252,159,151,0)'
+                    }],false),
+                    shadowColor:'rgba(0,0,0,0.1)',
+                    shadowBlur:10
+                }
+
+            },
+        },
+        
+        {
+            name:'Mong Kok',
+            type:'line',
+            data:[,57,63,67,60,73,63,70,75,69,67,66,62,55,55,55,47,50,48,44],
+            areaStyle:{
+                normal:{
+                    color: new echarts.graphic.LinearGradient(0,0,0,1,[{
+                        offset:0,
+                        color:'rgba(252,159,151,0.8)'
+                    },{
+                        offset:0.75,
+                        color:'color:rgba(252,159,151,0)'
+                    }],false),
+                    shadowColor:'rgba(0,0,0,0.1)',
+                    shadowBlur:10
+                }
+
+            },
+             
+        },
+        
+    ]
+};
+            myChart6.setOption(option);
+ });
+            </script>
+>>>>>>> origin/gh-pages
 <script type="text/javascript">
     var myChart1 = echarts.init(document.getElementById('relation'));
     option = {
