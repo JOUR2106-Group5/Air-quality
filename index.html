@@ -63,8 +63,51 @@
             <div style=" display: block;margin-top: 20px;height: 350px; margin-bottom: 50px;"></div>
 
         </div>
+        <div style="margin-top: 10px">
+            <h1 style="text-align: center;font-weight:100;margin: 18px;font-size:30px"> Roadside air quality has changed just a little for past 20 years</h1>
+            <div class="bmi-content" style="width:78%;display:block;margin-left:auto;margin-right:auto">
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li role="presentation" class="active" style="font-size: 18px">
+                        <a href="#Electricity" aria-controls="Electricity" role="tab" data-toggle="tab">
+                                PM2.5
+                            </a>
+                    </li>
+                    <li role="presentation" style="font-size: 18px">
+                        <a href="#Town" aria-controls="Town" role="tab" data-toggle="tab">
+                                NO2
+                            </a>
+                    </li>
+                    <li role="presentation" style="font-size: 18px">
+                        <a href="#Oil" aria-controls="Oil" role="tab" data-toggle="tab">
+                            PM10
+                            </a>
+                    </li>
+
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="Electricity">
+
+                        <div id="charta1" style="width: 1120px;height:500px;"></div>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Town">
+
+                        <div id="charta2" style="width: 1120px;height:500px;"></div>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Oil">
+
+                        <div id="charta3" style="width: 1120px;height:500px;"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
         <div style="margin-top:20px">
-            <div style="width:100%;height:400px;display:block;" id="impact"></div>
+            <div style="width:100%;height:600px;display:block;" id="impact"></div>
         </div>
         <div class="container2">
             <div class="back-to-top ">
@@ -84,6 +127,509 @@
     </main>
 
 </body>
+<script type="text/javascript">
+    $(function() {
+        var myChart4 = echarts.init(document.getElementById('charta1'));
+        var colors = ['#e8ca04', '#8dd972', '#7eb3ee']
+        option = {
+            backgroundColor: '#02182b',
+            color: colors,
+            title: {
+                text: 'pm2.5 changes in 20 years',
+                left: '40',
+                textStyle: {
+                    color: '#d6d3d4',
+                    fontSize: 16,
+                },
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['Causeway Bay', 'Central', 'Mong Kok'],
+                right: '30',
+                top: '15'
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                axisLine: {
+                    lineStyle: {
+                        color: ['#d6d3d4']
+                    }
+                },
+            },
+            yAxis: {
+                type: 'value',
+                axisLine: {
+                    lineStyle: {
+                        color: ['#d6d3d4']
+                    }
+                },
+                max: 60,
+                splitLine: {
+                    show: false
+                },
+            },
+            series: [{
+                    name: 'Causeway Bay',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    showSymbol: false,
+                    lineStyle: {
+                        normal: {
+                            width: 2
+                        }
+                    },
+
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(232,202,4,0.8)'
+                            }, {
+                                offset: 0.75,
+                                color: 'rgba(232,202,4,0)'
+                            }], false),
+                            shadowColor: 'rgba(0,0,0,0.1)',
+                            shadowBlur: 10
+                        }
+
+                    },
+                    data: [, , , , , , , , , , , , , , , , 42, 45, 38, 37],
+                    markLine: {
+                        lineStyle: {
+                            normal: {
+                                color: '#f996b9',
+                                width: 8
+
+                            }
+                        },
+                        data: [{
+                            name: 'WHO',
+                            yAxis: 10
+                        }],
+                        label: {
+                            normal: {
+                                show: true,
+                                formatter: '{b}:{c}'
+                            }
+                        }
+                    }
+                }, {
+                    name: 'Central',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    showSymbol: false,
+                    lineStyle: {
+                        normal: {
+                            width: 1
+                        }
+                    },
+
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(141,217,114,0.8)'
+                            }, {
+                                offset: 0.75,
+                                color: 'rgba(141,217,114,0)'
+                            }], false),
+                            shadowColor: 'rgba(0,0,0,0.1)',
+                            shadowBlur: 10
+                        }
+
+                    },
+                    data: [, , , , 43, 47, 45, 53, 54, 48, 47, 45, 41, 35, 36, 39, 33, 34, 28]
+
+                }, {
+                    name: 'Mong Kok',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    showSymbol: false,
+                    lineStyle: {
+                        normal: {
+                            width: 2
+                        }
+                    },
+
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(126,179,238,0.8)'
+                            }, {
+                                offset: 0.75,
+                                color: 'rgba(126,179,238,0)'
+                            }], false),
+                            shadowColor: 'rgba(0,0,0,0.1)',
+                            shadowBlur: 10
+                        }
+
+                    },
+                    data: [, , , , , , , , , , , , , , , 37, 32, 33, 31, 30]
+                },
+
+            ]
+        };
+        myChart4.setOption(option);
+    });
+</script>
+<!--chart 3 NO2-->
+<script type="text/javascript">
+    $(function() {
+        var myChart5 = echarts.init(document.getElementById('charta2'));
+        var colors = ['#e8ca04', '#8dd972', '#7eb3ee']
+        option = {
+            backgroundColor: '#02182b',
+            color: colors,
+            title: {
+                text: 'NO2 changes in 20 years',
+                left: '40',
+                textStyle: {
+                    color: '#d6d3d4',
+                    fontSize: 16,
+                },
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['Causeway Bay', 'Central', 'Mong Kok'],
+                right: '30',
+                top: '15'
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                axisLine: {
+                    lineStyle: {
+                        color: ['#d6d3d4']
+                    }
+                },
+            },
+            yAxis: {
+                type: 'value',
+                axisLine: {
+                    lineStyle: {
+                        color: ['#d6d3d4']
+                    }
+                },
+                max: 130,
+                splitLine: {
+                    show: false
+                },
+            },
+            series: [{
+                    name: 'Causeway Bay',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    showSymbol: false,
+                    lineStyle: {
+                        normal: {
+                            width: 2
+                        }
+                    },
+                    type: 'line',
+                    data: [, , 104, 105, 98, 105, 94, 91, 93, 95, 95, 90, 96, 109, 116, 124, 117, 121, 103, 106],
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(232,202,4,0.8)'
+                            }, {
+                                offset: 0.75,
+                                color: 'rgba(232,202,4,0)'
+                            }], false),
+                            shadowColor: 'rgba(0,0,0,0.1)',
+                            shadowBlur: 10
+                        }
+
+                    },
+                    markLine: {
+                        lineStyle: {
+                            normal: {
+                                color: '#f996b9',
+                                width: 8
+
+                            }
+                        },
+                        data: [{
+                            name: 'WHO',
+                            yAxis: 40
+                        }],
+                        label: {
+                            normal: {
+                                show: true,
+                                formatter: '{b}:{c}'
+                            }
+                        }
+                    }
+                }, {
+                    name: 'Central',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    showSymbol: false,
+                    lineStyle: {
+                        normal: {
+                            width: 2
+                        }
+                    },
+                    data: [, , , 92, 94, 94, 90, 96, 105, 99, 96, 100, 102, 112, 122, 123, 117, 122, 104, 93],
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(141,217,114,0.8)'
+                            }, {
+                                offset: 0.75,
+                                color: 'rgba(141,217,114,0)'
+                            }], false),
+                            shadowColor: 'rgba(0,0,0,0.1)',
+                            shadowBlur: 10
+                        }
+
+                    },
+                }, {
+                    name: 'Mong Kok',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    showSymbol: false,
+                    lineStyle: {
+                        normal: {
+                            width: 2
+                        }
+                    },
+                    data: [75, 85, 83, 86, 84, 99, 91, 98, 105, 93, 97, 101, 96, 108, 113, 120, 120, 116, 100, 97],
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(126,179,238,0.8)'
+                            }, {
+                                offset: 0.75,
+                                color: 'rgba(126,179,238,0)'
+                            }], false),
+                            shadowColor: 'rgba(0,0,0,0.1)',
+                            shadowBlur: 10
+                        }
+
+                    },
+
+                },
+
+
+            ]
+        };
+        myChart5.setOption(option);
+    });
+</script>
+<!--chart 4 PM10-->
+<script type="text/javascript">
+    $(function() {
+        var myChart6 = echarts.init(document.getElementById('charta3'));
+        var colors = ['#e8ca04', '#8dd972', '#7eb3ee']
+        option = {
+            backgroundColor: '#02182b',
+            color: colors,
+            title: {
+                text: 'PM10 changes in 20 years',
+                left: '40',
+                textStyle: {
+                    color: '#d6d3d4',
+                    fontSize: 16,
+                },
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['Causeway Bay', 'Central', 'Mong Kok'],
+                right: '30',
+                top: '15'
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+                axisLine: {
+                    lineStyle: {
+                        color: ['#d6d3d4']
+                    }
+                },
+            },
+            yAxis: {
+                type: 'value',
+                axisLine: {
+                    lineStyle: {
+                        color: ['#d6d3d4']
+                    }
+                },
+                max: 120,
+                splitLine: {
+                    show: false
+                },
+            },
+            series: [{
+                    name: 'Causeway Bay',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    showSymbol: false,
+                    lineStyle: {
+                        normal: {
+                            width: 2
+                        }
+                    },
+                    data: [, , 109, 105, 101, 97, 80, 81, 88, 84, 83, 85, 79, 71, 66, 66, 61, 64, 57, 55],
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(232,202,4,0.8)'
+                            }, {
+                                offset: 0.75,
+                                color: 'rgba(232,202,4,0)'
+                            }], false),
+                            shadowColor: 'rgba(0,0,0,0.1)',
+                            shadowBlur: 10
+                        }
+
+                    },
+                    markLine: {
+                        lineStyle: {
+                            normal: {
+                                color: '#f996b9',
+                                width: 5
+
+                            }
+                        },
+                        data: [{
+                            name: 'WHO',
+                            yAxis: 20
+                        }],
+                        label: {
+                            normal: {
+                                show: true,
+                                formatter: '{b}:{c}'
+                            }
+                        }
+                    }
+
+                },
+
+                {
+                    name: 'Central',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    showSymbol: false,
+                    lineStyle: {
+                        normal: {
+                            width: 2
+                        }
+                    },
+                    data: [, , , 76, 66, 70, 68, 77, 77, 72, 75, 68, 63, 58, 59, 62, 51, 56, 46, 37],
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(141,217,114,0.8)'
+                            }, {
+                                offset: 0.75,
+                                color: 'rgba(141,217,114,0)'
+                            }], false),
+                            shadowColor: 'rgba(0,0,0,0.1)',
+                            shadowBlur: 10
+                        }
+
+                    },
+                },
+
+                {
+                    name: 'Mong Kok',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    showSymbol: false,
+                    lineStyle: {
+                        normal: {
+                            width: 2
+                        }
+                    },
+                    data: [, 57, 63, 67, 60, 73, 63, 70, 75, 69, 67, 66, 62, 55, 55, 55, 47, 50, 48, 44],
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(126,179,238,0.8)'
+                            }, {
+                                offset: 0.75,
+                                color: 'rgba(126,179,238,0)'
+                            }], false),
+                            shadowColor: 'rgba(0,0,0,0.1)',
+                            shadowBlur: 10
+                        }
+
+                    },
+
+                },
+
+            ]
+        };
+        myChart6.setOption(option);
+    });
+</script>
 <script type="text/javascript">
     var myChart1 = echarts.init(document.getElementById('relation'));
     option = {
@@ -615,7 +1161,7 @@
 
 <script type="text/javascript">
     var myChart3 = echarts.init(document.getElementById('impact'));
-    var colors = ['#659F83', '#e8ca04', '#F68989'];
+    var colors = ['#659F83', '#e8ca04', '#f996b9'];
 
     option = {
         backgroundColor: '#02182b',
