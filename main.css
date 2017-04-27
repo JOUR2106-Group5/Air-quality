@@ -245,3 +245,73 @@ table td {
     text-transform: uppercase;
     transition: margin-top .5s ease;
 }
+
+.jisuan {
+    background-color: #122945;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    display: block;
+    position: relative;
+    height: 450px;
+}
+
+.guocheng {
+    background-image: url(picture/640.jpg@360h.jpg);
+    background-color: #a8a9a8;
+    background-blend-mode: multiply;
+    opacity: 0.35;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100%;
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    margin-top: 32.8177px;
+    padding-top: 45px;
+    text-align: center;
+    color: #eceeef;
+    display: block;
+}
+
+input[type="range"] {
+    display: block;
+    -webkit-appearance: none;
+    background-color: #bdc3c7;
+    width: 80%;
+    height: 5px;
+    border-radius: 5px;
+    margin-bottom: 100px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 0;
+}
+
+input[id="male-age-change"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: aquamarine;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.age-value {
+    color: aquamarine;
+    text-shadow: 2px 2px 2px #2d2d35;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    width: 80%;
+    height: 25px;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    letter-spacing: -.07em;
+    text-shadow: darkblue 0.3px 0.3px 0.3px;
+}
