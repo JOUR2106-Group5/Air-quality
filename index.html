@@ -56,9 +56,9 @@
                 <div class="headline">HongKong's roadside air quality level was stiil twice that of WHO's upper limitation</div>
                 <p style="padding-left: 10%; display: block; color:#B2B2B2; margin-bottom: 32px; margin-top: 32px; font-size: 15px;line-height: 1rem;font-weight: 300;font-family: 'nyt-cheltenham', georgia, 'times new roman', times, serif; letter-spacing: 0.075em;">ENVIRONMENT & HEALTH</p>
                 <div style="padding-left: 10%; display: block; color: #B2B2B2;  margin-top: 32px; font-size: 15px;line-height: 1rem;font-weight: 300;font-family: 'nyt-cheltenham', georgia, 'times new roman', times, serif; letter-spacing: 0.075em;">
-                    <p>By GROUP 5 </p>
+                    <p>By GROUP 5 </P>
                     <br>
-                    <P>JINGXI HUANG</p>
+                    <P>JINGXI HUANG</P>
                     <br>
                     <p> YUJIE LI</p>
                     <br>
@@ -101,6 +101,7 @@
         </div>
         <div class="jieshao">
             <div class="row">
+                <!--NO2-->
                 <div class="col-lg-5 col-md-5">
                     <div class="row">
                         <div class="col-lg-1 col-md-1">
@@ -117,12 +118,60 @@
                             </h5>
                         </div>
                     </div>
-
                 </div>
                 <div class="col-lg-7 col-md-7">
                     <div id="main1" style="width:100%;height:400px;"></div>
                 </div>
             </div>
+            <!--PM2.5-->
+            <div class="row">
+                <div class="col-lg-5 col-md-5">
+                    <div class="row">
+                        <div class="col-lg-1 col-md-1">
+                            <img src="picture/PM2.5.png" class="jietu">
+                        </div>
+                        <div class="col-lg-11 col-md-11">
+                            <h3>PM2.5</h3>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+
+                            <h5>
+                                PM2.5 refer to the particles with a diameter of 2.5 micrometers or less. PM2.5 has a larger superficial area than PM10, so it’s easier for PM2.5 to adsorb toxic substance.
+According to EPD HK, road traffic contributed to 10.49% of PM2.5 emission in 2015.
+
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7">
+                    <div id="main3" style="width:100%;height:400px;"></div>
+                </div>
+            </div>
+            <!--pm10-->
+            <div class="row">
+                <div class="col-lg-5 col-md-5">
+                    <div class="row">
+                        <div class="col-lg-1 col-md-1">
+                            <img src="picture/操作-PM10.png" class="jietu">
+                        </div>
+                        <div class="col-lg-11 col-md-11">
+                            <h3> PM10</h3>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+
+                            <h5>
+                                PM10 refer to the particles with a diameter between 2.5 and 10 micrometers. PM10 can do harm to respiratory system and cardiovascular system, and cause asthma, lung cancer and cardiovascular disease.
+According to EPD HK, road traffic contributed to 9.02% of PM10 emission in 2015.
+
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7">
+                    <div id="main2" style="width:100%;height:400px;"></div>
+                </div>
+            </div>
+            <!--END-->
         </div>
         <div class="mainpart">
             <div style="margin-top: 40px">
@@ -289,7 +338,7 @@
                             <div class="col-lg-12 text-center">
                                 <div style=" width:100%; height:600px" id="map">
 
-                                    <br>
+                                    </br>
                                 </div>
                             </div>
                         </div>
@@ -365,14 +414,7 @@
         <footer>
             <div class="footer">
                 <p style="color:white">Reference:</p>
-                <p style="color:white"><a href="http://www.epd.gov.hk/epd/english/top.html">Environment Protection Department</a></p>
-                <p style="color:white"><a href="http://hedleyindex.sph.hku.hk/html/tc/index.php">Hedley Environmental Index</a></p>
-                <p style="color:white"><a href="http://www.weather.org.hk/aqi.html">Weather Underground of Hong Kong</a></p>
-                <p style="color:white"><a href="https://developers.google.com/maps/documentation/javascript/?hl=zh-tw">Google Maps API</a></p>
-                <p style="color:white"><a href="http://echarts.baidu.com/api.html#echarts">Baidu Echarts API</a></p>
-                <p style="color:white"><a href="http://www.enb.gov.hk/tc/files/New_Air_Plan_tc.pdf">香港清新空氣藍圖</a></p>
-                <p style="color:white"><a href="http://www.weather.org.hk/aqi.html">The Air Pollution Control Ordinance (Cap.311)</a></p>
-                <p style="color:white"><a href="https://www.elegislation.gov.hk/hk/cap311!en@2014-04-10T00:00:00/longTitle?elpid=85837">Weather Underground of Hong Kong</a></p>
+
 
             </div>
         </footer>
@@ -1920,3 +1962,121 @@
     }
     myChart3.setOption(option);
 </script>
+<script type="text/javascript">
+            //基於準備好的dom，初始化echarts實例
+            var myChart2 = echarts.init(document.getElementById('main2'));
+            //指定圖表的配置項和數據
+            option = {
+                title: {
+                    text: 'PM10',
+                    subtext: 'EPD HK',
+                    x: 'right'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                    data: ['Road Traffic', 'Public Electricity', 'Water Transport', 'Civil Aviation', 'Other Burning', 'Non-Burning', 'Biomass Burning']
+                },
+                series: [{
+                    name: 'Contaminant Source',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    color: ['#99CC33', '#CCFFFF', '#99CCFF', '#3399CC', '#6699CC', '#336699', '#003366'],
+                    data: [{
+                        value: 490,
+                        name: 'Road Traffic'
+                    }, {
+                        value: 580,
+                        name: 'Public Electricity'
+                    }, {
+                        value: 1860,
+                        name: 'Water Transport'
+                    }, {
+                        value: 50,
+                        name: 'Civil Aviation'
+                    }, {
+                        value: 800,
+                        name: 'Other Burning'
+                    }, {
+                        value: 910,
+                        name: 'Non-Burning'
+                    }, {
+                        value: 740,
+                        name: 'Biomass'
+                    }],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }]
+            };
+            //使用剛指定的配置項和數據顯示圖表
+            myChart2.setOption(option);
+        </script>
+ <script type="text/javascript">
+            //基於準備好的dom，初始化echarts實例
+            var myChart3 = echarts.init(document.getElementById('main3'));
+            //指定圖表的配置項和數據
+            option = {
+                title: {
+                    text: 'PM2.5',
+                    subtext: 'EPD HK',
+                    x: 'right'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                    data: ['Road Traffic', 'Public Electricity', 'Water Transport', 'Civil Aviation', 'Other Burning', 'Non-Burning', 'Biomass Burning']
+                },
+                series: [{
+                    name: 'Contaminant Source',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    color: ['#99CC33', '#CCFFFF', '#99CCFF', '#3399CC', '#6699CC', '#336699', '#003366'],
+                    data: [{
+                        value: 450,
+                        name: 'Road Traffic'
+                    }, {
+                        value: 290,
+                        name: 'Public Electricity'
+                    }, {
+                        value: 1690,
+                        name: 'Water Transport'
+                    }, {
+                        value: 50,
+                        name: 'Civil Aviation'
+                    }, {
+                        value: 740,
+                        name: 'Other Burning'
+                    }, {
+                        value: 470,
+                        name: 'Non-Burning'
+                    }, {
+                        value: 600,
+                        name: 'Biomass'
+                    }],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }]
+            };
+            //使用剛指定的配置項和數據顯示圖表
+            myChart3.setOption(option);
+        </script>
