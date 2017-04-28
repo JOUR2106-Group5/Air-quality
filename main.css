@@ -486,29 +486,3 @@ input[id="male-age-change"]::-webkit-slider-thumb {
     line-height: 35px;
     font-size: 20px;
 }
-
-.submit_btn:hover {
-    background-color: #fff;
-    color: #199a49;
-    border-color: #199a49;
-}
-
-.submit_btn {
-    border: 2px solid #fff;
-    background-color: #199a49;
-    color: #fff;
-    border-color: #fff;
-    padding: 7px 15px;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    align-items: flex-start;
-    text-align: center;
-    display: inline-block;
-    margin-bottom: 10px;
-}

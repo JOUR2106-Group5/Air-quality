@@ -307,7 +307,7 @@
                         <div class="age-value" id="male-age">0</div>
                         <p style="color:white;font-size:20px;">µg/m3</p>
                         <input type="range" min="0" max="60" step="1" value="0" id="male-age-change">
-                        <center> <button type="button" class="submit_btn" id="answer">Click</button></center>
+
                     </form>
                 </div>
             </div>
@@ -483,11 +483,11 @@
     </script>
     <script>
         $(function() {
-            $('#answer').click(function() {
-                var age = $('#male-age').val();
+            $('#male-age-change').change(function() {
+                var age = $('#male-age-change').val();
                 if (age > 5) {
-                    var MG = 1408 * age - 5760;
-                    var DG = 112 * age - 437;
+                    var MG = 1409 * age - 5760;
+                    var DG = 113 * age - 437;
                     $('#mg').val(MG);
                     $('#dg').val(DG);
                 } else if (age < 5) {
