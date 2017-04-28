@@ -10,6 +10,11 @@ ul {
     border-top: 3px solid #c9d6d7;
 }
 
+a {
+    text-decoration: none;
+    outline: none;
+}
+
 a:focus {
     outline: none;
     text-decoration: none;
@@ -138,6 +143,7 @@ table {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
     border-collapse: collapse;
     font-size: 100%;
     font: inherit;
@@ -170,13 +176,23 @@ table td {
     display: table-cell;
 }
 
+table a {
+    color: white
+}
+
+table a:hover {
+    color: #199a49;
+    text-decoration: none;
+    outline: none;
+}
+
 .table {
     display: block;
     position: relative;
     background: #02182b;
     z-index: 2;
     overflow: visible;
-    padding: 0;
+    padding-bottom: 20px;
     font-size: 100%;
     font-family: sans-serif;
     text-decoration: none;
