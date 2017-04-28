@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hong Kong Air Quality</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 22.377063374811293,
+                    lng: 114.15412902832031
+                },
+                zoom: 11
+            });
+            var contentString1 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Green Island</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:4.4</p>' +
+                '<p><b>PM10</b>:17.3</p>' +
+                '<p><b>PM10</b>:11.8</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow1 = new google.maps.InfoWindow({
+                content: contentString1
+            });
+            var marker1 = new google.maps.Marker({
+                position: new google.maps.LatLng(22.47124068633947, 114.36012268066405),
+                map: map,
+                title: 'GrassIsland'
+            });
+            marker1.addListener('click', function() {
+                infowindow1.open(map, marker1);
+            });
+            var contentString2 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Central and Western District</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:38</p>' +
+                '<p><b>PM10</b>:14.3</p>' +
+                '<p><b>PM10</b>:9.9</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow2 = new google.maps.InfoWindow({
+                content: contentString2
+            });
+            var marker2 = new google.maps.Marker({
+                position: new google.maps.LatLng(22.28477553903247, 114.14440333843231),
+                map: map,
+                title: 'CentralandWestern'
+            });
+            marker2.addListener('click', function() {
+                infowindow2.open(map, marker2);
+            });
+            var contentString3 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Eastern District</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:33.6</p>' +
+                '<p><b>PM10</b>:14.3</p>' +
+                '<p><b>PM10</b>:9.5</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow3 = new google.maps.InfoWindow({
+                content: contentString3
+            });
+            var marker3 = new google.maps.Marker({
+                position: new google.maps.LatLng(22.28283221646124, 114.21935498714447),
+                map: map,
+                title: 'Eastern'
+            });
+            marker3.addListener('click', function() {
+                infowindow3.open(map, marker3);
+            });
+            var contentString4 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Kwun Tong</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:31.6</p>' +
+                '<p><b>PM10</b>:27</p>' +
+                '<p><b>PM10</b>:14.3</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow4 = new google.maps.InfoWindow({
+                content: contentString4
+            });
+            var marker4 = new google.maps.Marker({
+                position: new google.maps.LatLng(22.31335638426525, 114.22491520643234),
+                map: map,
+                title: 'KwunTong'
+            });
+            marker4.addListener('click', function() {
+                infowindow4.open(map, marker4);
+            });
+            var contentString5 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Sham Shui Po</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:31.2</p>' +
+                '<p><b>PM10</b>:15.4</p>' +
+                '<p><b>PM10</b>:10.9</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow5 = new google.maps.InfoWindow({
+                content: contentString5
+            });
+            var marker5 = new google.maps.Marker({
+                position: new google.maps.LatLng(22.330184011107146, 114.1590964794159),
+                map: map,
+                title: 'ShamShuiPo'
+            });
+            marker5.addListener('click', function() {
+                infowindow5.open(map, marker5);
+            });
+            var contentString6 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Kwai Chung</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:47.7</p>' +
+                '<p><b>PM10</b>:13</p>' +
+                '<p><b>PM10</b>:11.3</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow6 = new google.maps.InfoWindow({
+                content: contentString6
+            });
+            var marker6 = new google.maps.Marker({
+                position: new google.maps.LatLng(22.357101014955106, 114.1296136379242),
+                map: map,
+                title: 'KwaiChung'
+            });
+            marker6.addListener('click', function() {
+                infowindow6.open(map, marker6);
+            });
+            var contentString7 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Tsuen Wan</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:42.1</p>' +
+                '<p><b>PM10</b>:14.3</p>' +
+                '<p><b>PM10</b>:10.2</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow7 = new google.maps.InfoWindow({
+                content: contentString7
+            });
+            var marker7 = new google.maps.Marker({
+                position: new google.maps.LatLng(22.371720846777613, 114.11450743675232),
+                map: map,
+                title: 'TsuenWan'
+            });
+            marker7.addListener('click', function() {
+                infowindow7.open(map, marker7);
+            });
+            var contentString8 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Tsueng Kwan O</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:12.4</p>' +
+                '<p><b>PM10</b>:20.3</p>' +
+                '<p><b>PM10</b>:12.7</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow8 = new google.maps.InfoWindow({
+                content: contentString8
+            });
+            var marker8 = new google.maps.Marker({
+                position: new google.maps.LatLng(22.31761931029719, 114.25947278738022),
+                map: map,
+                title: 'TKO'
+            });
+            marker8.addListener('click', function() {
+                infowindow8.open(map, marker8);
+            });
+            var contentString9 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Yuen Long</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:30.2</p>' +
+                '<p><b>PM10</b>:21.8</p>' +
+                '<p><b>PM10</b>:11.6</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow9 = new google.maps.InfoWindow({
+                content: contentString9
+            });
+            var marker9 = new google.maps.Marker({
+                position: new google.maps.LatLng(22.44515889835453, 114.02272760868073),
+                map: map,
+                title: 'YuenLong'
+            });
+            marker9.addListener('click', function() {
+                infowindow9.open(map, marker9);
+            });
+            var contentString10 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Tuen Mun</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:21.9</p>' +
+                '<p><b>PM10</b>:20.8</p>' +
+                '<p><b>PM10</b>:16.9</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow10 = new google.maps.InfoWindow({
+                content: contentString10
+            });
+            var marker10 = new google.maps.Marker({
+                position: new google.maps.LatLng(22.391175194460892, 113.9767599105835),
+                map: map,
+                title: 'TeunMun'
+            });
+            marker10.addListener('click', function() {
+                infowindow10.open(map, marker10);
+            });
+            var contentString11 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Tong Chung</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:23</p>' +
+                '<p><b>PM10</b>:13.4</p>' +
+                '<p><b>PM10</b>:8.1</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow11 = new google.maps.InfoWindow({
+                content: contentString11
+            });
+            var marker11 = new google.maps.Marker({
+                position: new google.maps.LatLng(22.288917729045593, 113.9435863494873),
+                map: map,
+                title: 'TungChung'
+            });
+            marker11.addListener('click', function() {
+                infowindow11.open(map, marker11);
+            });
+            var contentString12 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Tai Po</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:44.6</p>' +
+                '<p><b>PM10</b>:19</p>' +
+                '<p><b>PM10</b>:13.2</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow12 = new google.maps.InfoWindow({
+                content: contentString12
+            });
+            var marker12 = new google.maps.Marker({
+                position: new google.maps.LatLng(22.450934893130537, 114.16460037231445),
+                map: map,
+                title: 'TaiPo'
+            });
+            marker12.addListener('click', function() {
+                infowindow12.open(map, marker12);
+            });
+            var contentString13 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Sha Tin</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:20.9</p>' +
+                '<p><b>PM10</b>:13.5</p>' +
+                '<p><b>PM10</b>:8.7</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow13 = new google.maps.InfoWindow({
+                content: contentString13
+            });
+            var marker13 = new google.maps.Marker({
+                position: new google.maps.LatLng(22.376254815957402, 114.18453991413116),
+                map: map,
+                title: 'ShaTin'
+            });
+            marker13.addListener('click', function() {
+                infowindow13.open(map, marker13);
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg9uwwi88KwUXl60GGTs0dng974oIoY2U&callback=initMap" async defer></script>
+</body>
+
+</html>
