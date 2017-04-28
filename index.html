@@ -52,7 +52,7 @@
 
 
         <div style="height:650px; width:100%;background-color:#02182b ">
-            <div style="float: left;margin-top:50px;margin-left:10%; width: 35%;height:720px">
+            <div style="float: left;margin-top:50px;margin-left:10%; width: 35%;height:620px">
                 <div class="headline">HongKong's roadside air quality level was stiil twice that of WHO's upper limitation</div>
                 <p style="padding-left: 10%; display: block; color:#B2B2B2; margin-bottom: 32px; margin-top: 32px; font-size: 15px;line-height: 1rem;font-weight: 300;font-family: 'nyt-cheltenham', georgia, 'times new roman', times, serif; letter-spacing: 0.075em;">ENVIRONMENT & HEALTH</p>
                 <div style="padding-left: 10%; display: block; color: #B2B2B2;  margin-top: 32px; font-size: 15px;line-height: 1rem;font-weight: 300;font-family: 'nyt-cheltenham', georgia, 'times new roman', times, serif; letter-spacing: 0.075em;">
@@ -64,9 +64,9 @@
                     <br>
                     <p> YUE LIU </p>
                 </div>
-                <div style="margin-left:10%; margin-top:10%">
+                <div style="margin-left:10%; margin-top:5%">
 
-                    <a href="#whata" class="slider_btn"><img src="picture/down.png" style="height:10px"></a>
+                    <a href="#main" class="slider_btn"><img src="picture/down.png" style="height:10px"></a>
                 </div>
 
             </div>
@@ -74,19 +74,8 @@
             <div style="float:right;width:54%;height:620px" id="relation">
             </div>
         </div>
-        <div id="whata" class="what">
-            <div class="biaoti" style="float:left;margin-top:0px; padding-top:0">
-                <h2>What are the Key Pollutants?</h2>
-                <h4> Are you really know about your living place?</h4>
-            </div>
-            <div class="tricker" style="float:right; margin-right:18%">
-                <h2>NO2</h2>
-                <h2>PM2.5</h2>
-                <h2>PM10</h2>
 
-            </div>
-        </div>
-        <div class="mainpart">
+        <div id="main" class="mainpart">
             <div class="leader"><span class="da">S</span>
                 <p class="p">ince Under the Dome, a self-financed documentary film by Chai Jing, was first praised by the minister of environmental protection and later removed by Chinese Publicity department, haze issue has been annually mentioned when winter is
                     coming. Starting from Beijing, the haze weather has swept across the whole country, including Hong Kong.</p>
@@ -94,17 +83,59 @@
                     limitation. Public transportation has become a major source of air pollution. The main pollutants include <span style="font-weight: 900;">PM2.5, PM10, and NO2</span>. Air pollution doesn't only affect the public health, but also causes
                     direct and indirect economic losses.
                 </p>
-                <div style="margin-top: 40px">
-                    <h4 class="sub">Death and Money Loss</h4>
-                    <br>
-                    <p class="p">Hedley Environmental Index, created by Dr.Hedley in 2008, is a new measurement method using economic loss and health burden to present the cost of air pollution.
-                    </p>
-                    <p class="p">The number of early deaths caused by air pollution has reached 2,196, causing economic damage $27.4 billion in 2016.
-                    </p>
-                </div>
+            </div>
+        </div>
+        <div id="whata" class="what">
+            <div class="biaoti" style="margin-top:5%; padding-top:0">
+                <h2>What are the Key Pollutants?</h2>
+                <h4> Are you really know about your living place?</h4>
+            </div>
+
+
+            <div class="tricker" style="float:right; margin-right:18%;margin-top:7%">
+                <h2>NO2</h2>
+                <h2>PM2.5</h2>
+                <h2>PM10</h2>
 
             </div>
         </div>
+        <div class="jieshao">
+            <div class="row">
+                <div class="col-lg-5 col-md-5">
+                    <div class="row">
+                        <div class="col-lg-1 col-md-1">
+                            <img src="picture/N.png" class="jietu">
+                        </div>
+                        <div class="col-lg-11 col-md-11">
+                            <h3> NOX</h3>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+
+                            <h5>
+                                Nitrogen 0xide (NOX), may refer to a binary compound of oxygen and nitrogen. Nitrogen 0xide, especially NO2, is harmful to the nervous system of the human body. The excessive emission of Nitrogen 0xide can also cause acid rain. According to EPD HK, road
+                                traffic contributed to 17% of Nitrogen 0xide emission in 2015.
+                            </h5>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-7 col-md-7">
+                    <div id="main1" style="width:100%;height:400px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mainpart">
+            <div style="margin-top: 40px">
+                <h4 class="sub">Death and Money Loss</h4>
+                <br>
+                <p class="p">Hedley Environmental Index, created by Dr.Hedley in 2008, is a new measurement method using economic loss and health burden to present the cost of air pollution.
+                </p>
+                <p class="p">The number of early deaths caused by air pollution has reached 2,196, causing economic damage $27.4 billion in 2016.
+                </p>
+            </div>
+
+        </div>
+
         <div class="table">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
@@ -635,6 +666,65 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg9uwwi88KwUXl60GGTs0dng974oIoY2U&callback=initMap" async defer></script>
 
 </body>
+<script type="text/javascript">
+    //基於準備好的dom，初始化echarts實例
+    var myChart1 = echarts.init(document.getElementById('main1'));
+    //指定圖表的配置項和數據
+    option = {
+        title: {
+            text: 'Nitrogen 0xide',
+            subtext: 'EPD HK',
+            x: 'right'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['Road Traffic', 'Public Electricity', 'Water Transport', 'Civil Aviation', 'Other Burning', 'Non-Burning', 'Biomass Burning']
+        },
+        series: [{
+            name: 'Contaminant Source',
+            type: 'pie',
+            radius: '55%',
+            center: ['50%', '60%'],
+            color: ['#99CC33', '#CCFFFF', '#99CCFF', '#3399CC', '#6699CC', '#336699', '#003366'],
+            data: [{
+                value: 16200,
+                name: 'Road Traffic'
+            }, {
+                value: 26090,
+                name: 'Public Electricity'
+            }, {
+                value: 33900,
+                name: 'Water Transport'
+            }, {
+                value: 5000,
+                name: 'Civil Aviation'
+            }, {
+                value: 10450,
+                name: 'Other Burning'
+            }, {
+                value: 0,
+                name: 'Non-Burning'
+            }, {
+                value: 60,
+                name: 'Biomass'
+            }],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }]
+    };
+    //使用剛指定的配置項和數據顯示圖表
+    myChart1.setOption(option);
+</script>
 <script type="text/javascript">
     $(function() {
         var myChart4 = echarts.init(document.getElementById('charta1'));

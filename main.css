@@ -4,11 +4,6 @@ ul {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 a:focus {
     outline: none;
     text-decoration: none;
@@ -117,6 +112,7 @@ a:focus {
     box-sizing: border-box;
     line-height: 35px;
     font-size: 20px;
+    text-align: justify;
 }
 
 .sub {
@@ -250,7 +246,7 @@ table td {
     margin-top: 0;
     width: 50%;
     color: #fff;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 .biaoti h2 {
@@ -260,10 +256,12 @@ table td {
     border-bottom: 11px solid #199a49;
     padding-right: 50px;
     font-size: 40px;
+    text-align: justify;
 }
 
 .biaoto h4 {
     font-size: 30px;
+    text-align: justify;
 }
 
 .tricker {
@@ -282,6 +280,7 @@ table td {
     text-align: center;
     text-transform: uppercase;
     transition: margin-top .5s ease;
+    text-align: justify;
 }
 
 .jisuan {
@@ -368,6 +367,7 @@ input[id="male-age-change"]::-webkit-slider-thumb {
     line-height: 40px;
     font-family: sans-serif;
     box-sizing: border-box;
+    text-align: justify;
 }
 
 .heading p {
@@ -378,4 +378,55 @@ input[id="male-age-change"]::-webkit-slider-thumb {
     line-height: 28px;
     font-weight: 300;
     padding-bottom: 10px;
+    text-align: justify;
+}
+
+.jieshao {
+    display: block;
+    position: relative;
+    background: #f1f3e8;
+    z-index: 2;
+    overflow: visible;
+    padding: 40px;
+    padding-left: 15%;
+    font-size: 100%;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.jietu {
+    height: 150px
+}
+
+.jieshao h3 {
+    margin-left: 0;
+    border-bottom: 6px solid #199a49;
+    padding-bottom: 45px;
+    margin-top: 10%;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    box-sizing: border-box;
+    height: 3px;
+    left: 40%;
+    position: absolute;
+    width: 100px;
+}
+
+.jieshao h5 {
+    position: relative;
+    margin-top: 40px;
+    padding: 8px 10px;
+    margin-top: 2%;
+    font-family: sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    box-sizing: border-box;
+    width: 80%;
+    line-height: 2rem;
+    text-align: justify;
 }
