@@ -109,7 +109,7 @@ main {
     flex-direction: row;
     align-items: center;
     position: relative;
-    height: 64pxt;
+    height: 74px;
     padding: 0 16px;
     pointer-events: none;
     font-size: 20px;
@@ -173,6 +173,9 @@ main {
 
 #header-background-back {
     background-image: url(picture/back.png);
+    background-color: #a8a9a8;
+    background-blend-mode: multiply;
+    opacity: 0.25;
     background-position: left center;
     opacity: 0;
     visibility: hidden;
@@ -180,5 +183,6 @@ main {
 
 #header-background-front {
     background-image: url(picture/back.png);
+    opacity: 0.75;
     background-position: left center;
 }
