@@ -307,11 +307,22 @@
                         <div class="age-value" id="male-age">0</div>
                         <p style="color:white;font-size:20px;">µg/m3</p>
                         <input type="range" min="0" max="60" step="1" value="0" id="male-age-change">
+                        <center> <button type="button" class="submit_btn" id="answer">Click</button></center>
                     </form>
                 </div>
             </div>
             <div class="jieguo">
 
+
+                <div style=" margin-top:20px;color:white;font-size:30px;"> <img style="height:60px;margin-right:10px" src="picture/money.png"> HK$ Loss ≈
+                    <input t class="form-control" type="text" style="margin-left:85px;margin-top:20px; height:40px;width:140px; font-size:25px;  text-align: center;" id="mg">
+                </div>
+                <div style="height:50px;">
+                </div>
+                <div style="margin-top:20px;color:white;font-size:30px;"> <img style="height:60px;margin-right:10px" src="picture/die.png"> Early Death ≈
+                    <div class="form-group"><input class="form-control" type="text" id="dg" style="margin-left:85px;margin-top:20px; height:40px;width:140px; font-size:25px; text-align: center;"></div>
+
+                </div>
             </div>
         </div>
 
@@ -459,14 +470,35 @@
         <script src="tricker.js ">
         </script>
     </main>
+
     <script>
         var elem = document.querySelector('input[id="male-age-change"]');
         var rangeValue = function() {
             var newValue = elem.value;
             var target = document.querySelector('.age-value');
             target.innerHTML = newValue;
-        }
+        };
+
         elem.addEventListener("input", rangeValue);
+    </script>
+    <script>
+        $(function() {
+            $('#answer').click(function() {
+                var age = $('#male-age').val();
+                if (age > 5) {
+                    var MG = 1408 * age - 5760;
+                    var DG = 112 * age - 437;
+                    $('#mg').val(MG);
+                    $('#dg').val(DG);
+                } else if (age < 5) {
+
+                    $('#mg').val(0);
+                    $('#dg').val(0);
+                }
+
+
+            })
+        })
     </script>
     <script>
         var map;

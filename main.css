@@ -301,6 +301,13 @@ table td {
     color: white
 }
 
+.jieguo {
+    float: right;
+    width: 40%;
+    height: 500px;
+    padding-top: 20px;
+}
+
 .guocheng {
     background-image: url(picture/640.jpg@360h.jpg);
     background-color: #a8a9a8;
@@ -326,7 +333,7 @@ input[type="range"] {
     width: 80%;
     height: 5px;
     border-radius: 5px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
@@ -478,4 +485,30 @@ input[id="male-age-change"]::-webkit-slider-thumb {
     font-family: sans-serif;
     line-height: 35px;
     font-size: 20px;
+}
+
+.submit_btn:hover {
+    background-color: #fff;
+    color: #199a49;
+    border-color: #199a49;
+}
+
+.submit_btn {
+    border: 2px solid #fff;
+    background-color: #199a49;
+    color: #fff;
+    border-color: #fff;
+    padding: 7px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    align-items: flex-start;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 10px;
 }
