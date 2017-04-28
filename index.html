@@ -295,6 +295,9 @@
             <div style="width:100%;height:450px;display:block;padding-left:55px" id="impact"></div>
         </div>
         <div class="jisuan">
+            <div style="width:100%;padding-top:2%">
+                <p> Calculate: What if the PM2.5 is⋯⋯</p>
+            </div>
             <div class="guocheng">
                 <div class="tab-content">
                     <form>
@@ -302,11 +305,13 @@
                             <label class="control-label" for="inputSuccess1" style="color:white;font-size:40px;">PM2.5 =</label>
                         </div>
                         <div class="age-value" id="male-age">0</div>
+                        <p style="color:white;font-size:20px;">µg/m3</p>
                         <input type="range" min="0" max="60" step="1" value="0" id="male-age-change">
                     </form>
                 </div>
             </div>
             <div class="jieguo">
+
             </div>
         </div>
 
@@ -454,6 +459,15 @@
         <script src="tricker.js ">
         </script>
     </main>
+    <script>
+        var elem = document.querySelector('input[id="male-age-change"]');
+        var rangeValue = function() {
+            var newValue = elem.value;
+            var target = document.querySelector('.age-value');
+            target.innerHTML = newValue;
+        }
+        elem.addEventListener("input", rangeValue);
+    </script>
     <script>
         var map;
 

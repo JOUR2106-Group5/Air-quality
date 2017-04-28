@@ -290,7 +290,15 @@ table td {
     width: 100%;
     display: block;
     position: relative;
-    height: 450px;
+    height: 500px;
+}
+
+.jisuan p {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    line-height: 35px;
+    font-size: 30px;
+    color: white
 }
 
 .guocheng {
@@ -304,8 +312,8 @@ table td {
     float: left;
     width: 50%;
     overflow: hidden;
-    margin-top: 32.8177px;
-    padding-top: 45px;
+    margin-top: 20px;
+    padding-top: 25px;
     text-align: center;
     color: #eceeef;
     display: block;
