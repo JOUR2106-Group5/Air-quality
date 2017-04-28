@@ -160,7 +160,8 @@ main {
 }
 
 .background {
-    background: #c0dbd7;
+    background: #759b89;
+    opacity: 0.25;
     pointer-events: none;
     position: absolute;
     background-size: cover;
@@ -173,17 +174,13 @@ main {
 }
 
 #header-background-back {
-    background-image: url(picture/back.png);
-    opacity: 0.75;
+    background: #759b89;
     background-position: left center;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0.15;
 }
 
 #header-background-front {
     background-image: url(picture/back.png);
-    background: #c0dbd7;
-    background-blend-mode: multiply;
-    opacity: 0.75;
+    opacity: 0.95;
     background-position: left center;
 }
