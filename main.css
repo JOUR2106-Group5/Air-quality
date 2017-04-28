@@ -384,11 +384,11 @@ input[id="male-age-change"]::-webkit-slider-thumb {
 .jieshao {
     display: block;
     position: relative;
-    background: #f1f3e8;
+    background: #f5fcff;
     z-index: 2;
     overflow: visible;
     padding: 40px;
-    padding-left: 15%;
+    padding-left: 10%;
     font-size: 100%;
     font-family: sans-serif;
     text-decoration: none;
@@ -429,4 +429,45 @@ input[id="male-age-change"]::-webkit-slider-thumb {
     width: 80%;
     line-height: 2rem;
     text-align: justify;
+}
+
+.obser {
+    margin-top: 40px;
+    background-image: url(picture/night.jpg);
+    background-color: #496ad5;
+    background-blend-mode: multiply;
+    opacity: 0.85;
+    background-repeat: no-repeat;
+    background-position: 0% 40%;
+    background-attachment: scroll;
+    background-size: 100%;
+    width: 100%;
+    height: 800px;
+    padding-top: 170px;
+    padding-left: 20%;
+    padding-right: 20%;
+    color: white;
+}
+
+.p2 {
+    position: relative;
+    margin-left: 40%;
+    margin-right: auto;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 500;
+    margin: 12px;
+    font-family: 'PT Serif';
+    box-sizing: border-box;
+    line-height: 30px;
+    padding-top: 12px;
+    text-shadow: 3px 2px 2px #2d2d35;
+}
+
+.obser p3 {
+    text-align: justify;
+    padding-top: 100px;
+    font-family: sans-serif;
+    line-height: 35px;
+    font-size: 20px;
 }
